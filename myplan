@@ -1,0 +1,13 @@
+
+
+
+cars -> lambo
+        ->image.png
+        ->phisics.json
+        ->specs.json
+            ->acceletation
+            ->maxSpeed
+            ->weight
+
+     -> toyota
+     -> benz

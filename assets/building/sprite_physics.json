@@ -1,0 +1,31 @@
+{ 
+    
+    "building": [
+        
+        {
+            "density": 2, "friction": 0, "bounce": 0, 
+            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "shape": [   287, 82  ,  79, 52  ,  116, 28  ,  197, 6  ,  235, 6  ,  312, 26  ]
+        } ,
+        {
+            "density": 2, "friction": 0, "bounce": 0, 
+            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "shape": [   79, 52  ,  287, 82  ,  333, 249  ,  300, 289  ,  231, 330  ,  161, 338  ,  55, 213  ,  10, 141  ]
+        } ,
+        {
+            "density": 2, "friction": 0, "bounce": 0, 
+            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "shape": [   333, 249  ,  321, 96  ,  342, 73  ,  403, 99  ]
+        } ,
+        {
+            "density": 2, "friction": 0, "bounce": 0, 
+            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "shape": [   55, 213  ,  161, 338  ,  99, 316  ,  38, 253  ]
+        } ,
+        {
+            "density": 2, "friction": 0, "bounce": 0, 
+            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "shape": [   321, 96  ,  333, 249  ,  287, 82  ]
+        }
+    ]
+}
