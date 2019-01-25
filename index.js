@@ -1,11 +1,12 @@
 console.log('aaa');
 
-var game = new Phaser.Game(1280, 839, Phaser.AUTO, 'main_game', { preload: preload, create: create, update: update });
+// var game = new Phaser.Game(1280, 839, Phaser.AUTO, 'main_game', { preload: preload, create: create, update: update });
+var game = new Phaser.Game("100", "100", Phaser.AUTO, 'main_game', { preload: preload, create: create, update: update });
 
 
 
 function preload() {
-    game.load.spritesheet('map','./assets/map.jpg');
+    game.load.spritesheet('map','./assets/map1.png');
     game.load.spritesheet('car','./assets/car.png');
     game.load.spritesheet('building','./assets/building/sprite.png');
     // game.load.spritesheet('girl','./assets/girl/betty.png');
@@ -17,6 +18,7 @@ var velocity = 0;
 
 function create() {
     var map = game.add.sprite(0,0,'map');
+    
     car = game.add.sprite(570,100,'car');
 
     var building = game.add.sprite(640,420,'building');
@@ -50,10 +52,9 @@ function create() {
     building.body.collides([buildingCollisionGroup,carCollisionGroup]);
 
     game.physics.p2.enable(car,true);
-
-
-    
 }
+
+function test(){console.log("colide")}
 
 function update(){
     if (cursors.up.isDown && velocity <= 400)

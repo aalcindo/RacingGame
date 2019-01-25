@@ -1,4 +1,7 @@
 
+sources:
+    https://opengameart.org/content/free-top-down-car-sprites-by-unlucky-studio
+    https://www.codeandweb.com/physicseditor/tutorials/phaser-p2-physics-example-tutorial
 
 
 cars -> lambo
@@ -11,3 +14,17 @@ cars -> lambo
 
      -> toyota
      -> benz
+
+map:
+    monaco
+        finish line
+        road_straight
+        road_turn_right
+        road_turn_left
+
+        rock
+            ->weight
+        
+        pond
+
+        grass
