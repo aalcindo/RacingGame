@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.4.8/phaser.min.js"></script>
-  <script type="text/javascript" src="index.js"></script>
+  <script src="src/game.js"></script>
+  <script src="src/car.js"></script>
+  <!-- <script src="src/util.js"></script> -->
 
 <title>Page Title</title>
 </head>
@@ -10,6 +13,13 @@
 
 <!-- <h1>This is a Heading</h1>
 <p>This is a paragraph.</p> -->
+  <script>
+      (function() {
+          var game = new Phaser.Game(1920, 1080, Phaser.AUTO, null);
+          game.state.add('Game', Game);
+          game.state.start('Game');
+      })();
+    </script>
 
 </body>
 </html>

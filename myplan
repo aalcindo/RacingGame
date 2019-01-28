@@ -28,3 +28,116 @@ map:
         pond
 
         grass
+
+
+
+        
+
+var cursors;
+var velocity = 0;
+var mapWidth=1920;
+var mapHeight=1080;
+
+function create() {
+    var map = game.add.sprite(0,0,'map');
+    var track = game.add.sprite(map.width/2,map.height/2,'track');
+    track.name='track';
+    // car = game.add.sprite(250,250,'car')
+    // car.name='car';
+    var graphics = game.add.graphics(0, 0);
+    // graphics.lineStyle(0);
+    graphics.beginFill(0xFF0000, 0.5);
+    // graphics.drawCircle(car.x, car.y, 50);
+    //graphics.endFill();
+    
+    //var building = game.add.sprite(640,420,'building');
+
+    // girl = game.add.sprite(570,100,'girl');
+    
+                                     
+
+    
+    cursors = game.input.keyboard.createCursorKeys();
+    game.physics.startSystem(Phaser.Physics.P2JS);
+
+    game.physics.p2.enable(track, true);
+    track.body.clearShapes();
+    track.body.kinematic = true;
+    //track.body.loadPolygon('track_outter_physics','track');
+    track.body.loadPolygon('track_physics','track');
+    
+    //var car1 = new car(this.game, 'car', 0, 0);
+
+    // game.physics.p2.enable(car,true);
+    // car.body.angle = 90;
+    // console.log(car);
+
+    /*//collision group for objects    
+    var carCollisionGroup = game.physics.p2.createCollisionGroup();
+    var buildingCollisionGroup = game.physics.p2.createCollisionGroup();
+    game.physics.p2.updateBoundsCollisionGroup();
+
+    //enable phisics for building
+    game.physics.p2.enable(building,true);
+    building.body.kinematic = true;// building is an immovable object
+    building.body.clearShapes();//deleting the bounding box, that is laying on the building on default:
+    building.body.loadPolygon('collision','building');//we’re loading our own bounding box, which we’ve exported from physics editor
+    
+    // we map the collision groups to the car and the building:
+    car.body.setCollisionGroup(carCollisionGroup);
+    building.body.setCollisionGroup(buildingCollisionGroup);
+    //we’re configuring, that the car and the building will collide:
+    car.body.collides([carCollisionGroup,buildingCollisionGroup]);
+    building.body.collides([buildingCollisionGroup,carCollisionGroup]);
+    */
+    //game.physics.p2.enable(car,true);
+
+    //game.physics.p2.setPostBroadphaseCallback(test, this);
+}
+
+function test(body1,body2){
+    // console.log(body1.sprite.name,body2.sprite.name);
+    return false;
+    if((body1.sprite.name === 'car' && body2.sprite.name === 'track') || 
+    (body2.sprite.name === 'car' && body1.sprite.name === 'track')){
+        //console.log("car in track");
+        return false;
+
+    }
+    return true;
+}
+
+function update(){
+    car1.update();
+    // if (cursors.up.isDown && velocity <= 400)
+    //         velocity+=7;
+    // else if (cursors.down.isDown && velocity <= 400)
+    //     if(velocity>0)    
+    //         velocity-=7;
+    //     else{ 
+    //         if(velocity>-150)
+    //             velocity-=3;
+    //     }
+    // else {
+    //     if (velocity >= 7)
+    //         velocity -= 7;
+    //     if (velocity <= -3)
+    //         velocity += 3;
+        
+    // }
+    // // console.log(velocity);
+
+    
+    
+                            
+    // car.body.velocity.x = velocity * Math.cos((car.angle-90)*0.01745);
+    // car.body.velocity.y = velocity * Math.sin((car.angle-90)*0.01745);
+                    
+    // if (cursors.left.isDown)
+    //     car.body.angularVelocity = -5*(velocity/1000);
+    // else if (cursors.right.isDown)
+    //     car.body.angularVelocity = 5*(velocity/1000);
+    // else
+    //     car.body.angularVelocity = 0;
+
+}
